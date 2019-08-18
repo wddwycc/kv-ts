@@ -3,7 +3,9 @@ import * as t from 'io-ts'
 import { O } from './utils/fp'
 
 export interface Store {
+  /** get string for key */
   get: (k: string) => O.Option<string>
+  /** set string for key */
   set: (k: string, a: string) => void
 }
 
