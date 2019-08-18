@@ -1,0 +1,32 @@
+{
+  "name": "kv-ts",
+  "version": "0.1.0",
+  "description": "Type-safe key-value store abstraction with typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wddwycc/kv-ts.git"
+  },
+  "keywords": [
+    "typescript",
+    "fp-ts",
+    "io-ts",
+    "key-value"
+  ],
+  "author": "duan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wddwycc/kv-ts/issues"
+  },
+  "homepage": "https://github.com/wddwycc/kv-ts#readme",
+  "dependencies": {
+    "fp-ts": "^2.0.0",
+    "io-ts": "^2.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
+}
