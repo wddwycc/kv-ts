@@ -68,7 +68,7 @@ entry.observe() // () => Observable<A>
 
 ## Custom store
 
-store does not define the storage itself, it defined how we do IO with the storage.
+store does not define the storage itself, it defined how we do IO with the key-value storage in a minimum way.
 
 ```typescript
 export interface Store {
@@ -104,4 +104,4 @@ export const LOCAL_STORAGE_STORE: Store = {
 }
 ```
 
-Basically, you can define your own store with these three functions.
+That is to say, you can define your any `store` you are using by implementing these three functions.
