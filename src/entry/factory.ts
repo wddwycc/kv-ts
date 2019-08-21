@@ -1,6 +1,7 @@
+import { Subject } from 'rxjs'
+
 import { InitEntryFactoryPayload, InitEntryPayload, StoreEntry } from '../types'
 import { E, O, pipe } from '../utils/fp'
-import { Subject } from 'rxjs'
 
 const initEntryFactory = <A, Wrapped>({
   wrapper,
@@ -42,7 +43,8 @@ const initEntryFactory = <A, Wrapped>({
     store.clear(key)
     subject.next(O.none)
   }
-  return { get, set, clear, observe: subject.asObservable }
+  const observe = () => subject.asObservable()
+  return { get, set, clear, observe }
 }
 
 export default initEntryFactory
