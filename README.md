@@ -91,7 +91,6 @@ here is how the `LOCAL_STORAGE_STORE` is implemented:
 ```typescript
 import * as O from 'fp-ts/lib/Option'
 import { pipe } from 'fp-ts/lib/pipeable'
-import { Store } from 'kv-ts'
 
 export const LOCAL_STORAGE_STORE: Store = {
   get: (k: string) =>
@@ -104,4 +103,4 @@ export const LOCAL_STORAGE_STORE: Store = {
 }
 ```
 
-That is to say, you can define your any `store` you are using by implementing these three functions.
+That is to say, you can define any `store` you are using by implementing these three functions.
