@@ -1,12 +1,11 @@
 {
   "name": "kv-ts",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Type-safe key-value store abstraction with typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "tsc && npm publish"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "fp-ts": "^2.0.0",
