@@ -1,6 +1,6 @@
 {
   "name": "kv-ts",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Type-safe key-value store abstraction with typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
