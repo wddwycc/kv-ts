@@ -49,11 +49,11 @@ When `entry.set` is called and 2 seconds passed, `entry.get` then can only retri
 
 ## withDefault
 
-you can create an Entry with default value to upgrade `StoreEntry<A>`.
+you can create an Entry with default value:
 
 ```typescript
 import { pipe } from 'fp-ts/lib/pipeable'
-import { initEntry, LOCAL_STORAGE_STORE } from 'kv-ts'
+import { initEntry, LOCAL_STORAGE_STORE, withDefault } from 'kv-ts'
 
 const entry = pipe(
   initEntry({ key: 'key', codec: t.string, store: LOCAL_STORAGE_STORE }),
