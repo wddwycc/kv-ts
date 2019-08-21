@@ -45,11 +45,11 @@ const entry = initEntryWithExpiry({
 })
 ```
 
-When `entry.set` is called and 2 seconds passed, `entry.get` method then can only retrieve `O.none`.
+When `entry.set` is called and 2 seconds passed, `entry.get` then can only retrieve `O.none`.
 
 ## withDefault
 
-you can create an Entry with default value.
+you can create an Entry with default value to upgrade `StoreEntry<A>`.
 
 ```typescript
 import { pipe } from 'fp-ts/lib/pipeable'
@@ -81,7 +81,7 @@ export interface Store {
 }
 ```
 
-we have several `store` presets:
+The lib includes several pre-defined `store`:
 
 - LOCAL_STORAGE_STORE
 - SESSION_STORAGE_STORE
@@ -104,4 +104,4 @@ export const LOCAL_STORAGE_STORE: Store = {
 }
 ```
 
-You can define any Store as your will.
+Basically, you can define your own store with these three functions.
