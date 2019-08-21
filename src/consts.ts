@@ -8,6 +8,7 @@ export const LOCAL_STORAGE_STORE: Store = {
       O.fromNullable,
     ),
   set: (k: string, a: string) => localStorage.setItem(k, a),
+  clear: (k: string) => localStorage.removeItem(k),
 }
 
 export const SESSION_STORAGE_STORE: Store = {
@@ -17,4 +18,5 @@ export const SESSION_STORAGE_STORE: Store = {
       O.fromNullable,
     ),
   set: (k: string, a: string) => sessionStorage.setItem(k, a),
+  clear: (k: string) => sessionStorage.removeItem(k),
 }

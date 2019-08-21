@@ -32,13 +32,17 @@ const initEntryFactory = <A, Wrapped>({
     )
   const subject = new Subject<O.Option<A>>()
   const set = (a: A) => {
-    subject.next(O.some(a))
     pipe(
       JSON.stringify(wrap(a)),
       a => store.set(key, a),
     )
+    subject.next(O.some(a))
   }
-  return { get, set, observe: subject.asObservable }
+  const clear = () => {
+    store.clear(key)
+    subject.next(O.none)
+  }
+  return { get, set, clear, observe: subject.asObservable }
 }
 
 export default initEntryFactory

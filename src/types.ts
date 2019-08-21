@@ -8,11 +8,14 @@ export interface Store {
   get: (k: string) => O.Option<string>
   /** set string for key */
   set: (k: string, a: string) => void
+  /** delete string for key */
+  clear: (k: string) => void
 }
 
 export interface StoreEntry<A> {
   get: () => O.Option<A>
   set: (a: A) => void
+  clear: () => void
   observe: () => Observable<O.Option<A>>
 }
 
