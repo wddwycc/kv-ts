@@ -1,5 +1,6 @@
 import { InitEntryFactoryPayload, InitEntryPayload, StoreEntry } from '../types'
 import { E, O, pipe } from '../utils/fp'
+import { Subject } from 'rxjs'
 
 const initEntryFactory = <A, Wrapped>({
   wrapper,
@@ -29,12 +30,15 @@ const initEntryFactory = <A, Wrapped>({
       O.filter(validate),
       O.map(unwrap),
     )
-  const set = (a: A) =>
+  const subject = new Subject<O.Option<A>>()
+  const set = (a: A) => {
+    subject.next(O.some(a))
     pipe(
       JSON.stringify(wrap(a)),
       a => store.set(key, a),
     )
-  return { get, set }
+  }
+  return { get, set, observe: subject.asObservable }
 }
 
 export default initEntryFactory

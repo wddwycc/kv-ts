@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "fp-ts": "^2.0.0",
-    "io-ts": "^2.0.0"
+    "io-ts": "^2.0.0",
+    "rxjs": "^6.0.0"
   },
   "devDependencies": {
     "typescript": "^3.5.3"

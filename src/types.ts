@@ -1,6 +1,7 @@
 import * as t from 'io-ts'
 
 import { O } from './utils/fp'
+import { Observable } from 'rxjs'
 
 export interface Store {
   /** get string for key */
@@ -12,6 +13,7 @@ export interface Store {
 export interface StoreEntry<A> {
   get: () => O.Option<A>
   set: (a: A) => void
+  observe: () => Observable<O.Option<A>>
 }
 
 export interface DataWrapper<A, Wrapped> {

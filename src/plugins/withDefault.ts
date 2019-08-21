@@ -1,5 +1,7 @@
+import { flow, Lazy } from 'fp-ts/lib/function'
+import * as Rx from 'rxjs/operators'
+
 import { StoreEntry } from '../types'
-import { Lazy, flow } from 'fp-ts/lib/function'
 import { O } from '../utils/fp'
 
 const withDefault = <A>(onNone: Lazy<A>) => (a: StoreEntry<A>) => ({
@@ -7,6 +9,10 @@ const withDefault = <A>(onNone: Lazy<A>) => (a: StoreEntry<A>) => ({
   get: flow(
     a.get,
     O.getOrElse(onNone),
+  ),
+  observe: flow(
+    a.observe,
+    Rx.map(O.getOrElse(onNone)),
   ),
 })
 
