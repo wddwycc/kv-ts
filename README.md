@@ -1,5 +1,7 @@
 # kv-ts
 
+[![npm version](https://img.shields.io/npm/v/kv-ts.svg?style=flat)](https://www.npmjs.com/package/kv-ts) [![CircleCI](https://circleci.com/gh/wddwycc/kv-ts.svg?style=shield)](https://circleci.com/gh/wddwycc/kv-ts)
+
 ## Features
 
 - functional key-value storage interface
