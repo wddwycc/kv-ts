@@ -95,4 +95,4 @@ typings/
 # End of https://www.gitignore.io/api/node
 
 dist/
-junit.xml
+test_results/
