@@ -6,4 +6,5 @@ module.exports = {
   },
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.ts'],
+  reporters: ['default', 'jest-junit'],
 }
